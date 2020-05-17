@@ -1,2 +1,2 @@
 [alias]
-    ls = !"git log --format='%C(yellow)%h;%Cblue%ad;%Creset%s' --date=format:'%a %b %d' --color=always -10 | column -t -s ';'"
+    ls = !"f() { git log --format='%C(yellow)%h;%Cblue%ad;%Creset%s' --date=format:'%a %b %d' --color=always ${1-\"-10\"} | column -t -s ';'; }; f"
